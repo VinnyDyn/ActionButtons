@@ -1,0 +1,8 @@
+/node_modules
+**/generated
+/out
+VinnyB.RetrieveActions/bin
+VinnyB.RetrieveActions/obj
+VinnyB.RetrieveActions/packages
+/bin
+/obj

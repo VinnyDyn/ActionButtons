@@ -1,0 +1,95 @@
+dialog
+{
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 25px;
+}
+
+.input_container
+{
+    width: 100%;
+    display: flex;
+}
+
+.input_container:hover
+{
+    background-color: #c0d4e8;
+}
+
+.input_container > div
+{
+    flex: 1;
+}
+
+input
+{
+    width: 100%;
+    border: none;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: gray;
+    margin-right: 5px;
+    background-color: transparent;
+}
+
+.required
+{
+    color: tomato;
+}
+
+.select
+{
+    width: 100%;
+    border: none;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: gray;
+    margin-left: 5px;
+    background-color: transparent;
+}
+
+.ul 
+{
+    width: 100%;
+    margin: 10px;
+}
+
+.line {
+    display: inline;
+    margin: 10px;
+    background: lightgray;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.buttonAction
+{
+    border: none;
+    border-radius: 5px;
+    background: whitesmoke;
+    margin-right: 5px;
+}
+
+.buttonRun
+{
+    margin: 10px;
+    width: 100px;
+    height: 25px;
+    background: springgreen;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttonCancel
+{
+    margin: 10px;
+    width: 100px;
+    height: 25px;
+    background: tomato;
+    border: none;
+    border-radius: 5px;
+}
