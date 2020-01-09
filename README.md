@@ -30,10 +30,12 @@ Use actions to implement the logic and the PCF to render these actions as button
 ![alt text](https://github.com/VinnyDyn/ActionButtons/blob/master/Images/configuration-01.gif)
 
 ### JSON Compose
+[Sample JSON Contract](https://github.com/VinnyDyn/ActionButtons/blob/master/json-config-sample.json)
+
 ![alt text](https://github.com/VinnyDyn/ActionButtons/blob/master/Images/configuration-02.gif)
 
 ### Ready to use
-The [managed]() solution is ideal for non developers. Import and use.
+The [managed](https://github.com/VinnyDyn/StatusReasonKanban/releases/tag/1.3.3) solution is ideal for non developers. Import and use.
 
 ### Developers
 The PCF call a Action (process) to obtain informations about the Actions related of subgrid entity type, then render the return as buttons.
