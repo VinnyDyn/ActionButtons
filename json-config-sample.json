@@ -1,0 +1,22 @@
+[
+    {
+        "ActionUniqueName":"vnb_task_all_attributes",
+        "Tooltip":"All Attributes Sample",
+        "WebResourceImage":"/WebResources/vnb_all_atributes"
+    },
+    {
+        "ActionUniqueName":"vnb_task_edit",
+        "Tooltip":"Edit",
+        "WebResourceImage":"/WebResources/vnb_edit"
+    },
+    {
+        "ActionUniqueName":"vnb_task_done",
+        "Tooltip":"Done",
+        "WebResourceImage":"/WebResources/vnb_done"
+    },
+    {
+        "ActionUniqueName":"vnb_task_cancel",
+        "Tooltip":"Cancel",
+        "WebResourceImage":"/WebResources/vnb_cancel"
+    }
+]

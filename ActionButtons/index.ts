@@ -66,7 +66,7 @@ export class ActionButtons implements ComponentFramework.StandardControl<IInputs
 				this._config = new Array();
 				this._config = JSON.parse(context.parameters.jsonConfig.raw!.toString());
 				this._actions = new Array();
-				this.CloseModal();
+				this.CloseModal(false);
 				this.Destroy();
 				this._subgridName = context.parameters.subgridname.raw!.toString();
 				this._subgrid = Xrm.Page.getControl<Xrm.Controls.GridControl>(this._subgridName);
@@ -176,7 +176,7 @@ export class ActionButtons implements ComponentFramework.StandardControl<IInputs
 						if (result.ok) {
 							responses++;
 							if(responses == requests)
-								self.CloseModal();
+								self.CloseModal(true);
 						}
 					},
 					function (error) {
@@ -203,12 +203,15 @@ export class ActionButtons implements ComponentFramework.StandardControl<IInputs
 	/**
 	 * Close Action Modal and clear selected rows
 	 */
-	public CloseModal() : void
+	public CloseModal(refreshSubGrid : boolean) : void
 	{
 		this._selectedRecords = null;
 		while (this._transactionalModal.lastChild) {
 			this._transactionalModal.removeChild(this._transactionalModal.lastChild);
 		}
+
+		if(refreshSubGrid)
+			this._subgrid.refresh();
 	}
 
 	//TRANSFORMATIONS ---------------------------------------------------------------------------------------------------------------
@@ -513,7 +516,7 @@ export class ActionButtons implements ComponentFramework.StandardControl<IInputs
 		let actionModal : HTMLDialogElement;
 		actionModal = document.createElement("dialog");
 		actionModal.id = action.UniqueName;
-		actionModal.addEventListener("close", this.CloseModal.bind(this));
+		actionModal.addEventListener("close", this.CloseModal.bind(this, true));
 		actionModal.append(this.GenerateActionHeader());
 		action.InputParameters.forEach(inputParameter => { actionModal.append(this.GenerateInputParameter(inputParameter));});
 		actionModal.append(this.GenerateActionModalButtons(action));
@@ -703,7 +706,7 @@ export class ActionButtons implements ComponentFramework.StandardControl<IInputs
 		buttonCancel = document.createElement("button");
 		buttonCancel.setAttribute("class","buttonCancel");
 		buttonCancel.textContent = "Cancel";
-		buttonCancel.addEventListener("click", this.CloseModal.bind(this));
+		buttonCancel.addEventListener("click", this.CloseModal.bind(this, true));
 		divActionButtons.append(buttonCancel);
 
 		return divActionButtons;

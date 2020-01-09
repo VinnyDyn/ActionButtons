@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="VinnyBControls" constructor="ActionButtons" version="0.0.1" display-name-key="ActionButtons" description-key="ActionButtons description" control-type="standard">
+  <control 
+  namespace="VinnyBControls" 
+  constructor="ActionButtons" 
+  version="0.0.1" 
+  display-name-key="ActionButtons" 
+  description-key="ActionButtons description" 
+  control-type="standard">
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
     <property name="attribute" display-name-key="Attribute" description-key="Host Attribute" of-type="SingleLine.Text" usage="bound" required="true" />
     <property name="subgridname" display-name-key="SubGridName" description-key="SubGrid Name" of-type="SingleLine.Text" usage="input" required="true" />
