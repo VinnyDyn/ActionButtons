@@ -2,6 +2,8 @@
 
 Use actions to implement the logic and the PCF to render these actions as buttons on subgrids.
 
+![alt text](https://github.com/VinnyDyn/ActionButtons/blob/master/Images/demo.gif)
+
 ### Features
 - Implement different buttons in subgrids of the same entity.
 - Define wich actions will be render as buttons, the icons and tool tips.
@@ -23,6 +25,12 @@ Use actions to implement the logic and the PCF to render these actions as button
 ### Prerequisites
 - The action must be active and associated with an entity
 - The component needs the SubgridName and JSON Config.
+
+### PCF Configuration
+![alt text](https://github.com/VinnyDyn/ActionButtons/blob/master/Images/configuration-01.gif)
+
+### JSON Compose
+![alt text](https://github.com/VinnyDyn/ActionButtons/blob/master/Images/configuration-02.gif)
 
 ### Ready to use
 The [managed]() solution is ideal for non developers. Import and use.
