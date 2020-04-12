@@ -10,7 +10,7 @@
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
     <property name="attribute" display-name-key="Attribute" description-key="Host Attribute" of-type="SingleLine.Text" usage="bound" required="true" />
     <property name="subgridname" display-name-key="SubGridName" description-key="SubGrid Name" of-type="SingleLine.Text" usage="input" required="true" />
-    <property name="jsonConfig" display-name-key="JSONConfig" description-key="JSON Configuration" of-type="SingleLine.TextArea" usage="input" required="true" />
+    <property name="jsonConfig" display-name-key="JSONConfig" description-key="JSON Configuration" of-type="Multiple" usage="input" required="true" />
     <!-- 
       Property node's of-type attribute can be of-type-group attribute. 
       Example:
